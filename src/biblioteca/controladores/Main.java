@@ -13,34 +13,20 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
-        Libro l1 = new Libro();
-        Libro l2 = new Libro();
-        Libro libro3 = new Libro();
+        Libro unLibro1 = new Libro("gfdg", "dlbdf", 2000, 56.44f, true);
+        Libro unLibro2 = new Libro("gjbs", "cbxvc", 1999, 87.41f, true);
+        Libro unLibro3 = new Libro("nsdvh", "asdgd", 1988, 96.74f, true);
         Libro aux;
+        
         int cantidad;
-        ArrayList<Libro> libros = new ArrayList<>();
+        ArrayList<Libro> libros = new ArrayList<>();       
         
-        l1.titulo = "askoas";
-        l1.anioDePublicacion = 2020;
-        l1.autor = "askasfaxzc";
-        l1.disponible = true;
-        l1.precio = 73.45;
-        
-        l2.titulo = "asokzvxbe";
-        l2.autor = "kdnbjodn";
-        l2.anioDePublicacion = 2000;
-        l2.disponible = false;
-        l2.precio = 45.12;
-        
-        libro3.autor = "hdjashdka";
-        libro3.anioDePublicacion = 1991;
-        libro3.disponible = true;
-        libro3.titulo = "askadcxcv";
-        libro3.precio = 41.78;
-        
-        libros.add(l2);
-        libros.add(l1);
+        libros.add(unLibro1);
+        libros.add(unLibro2);
 
+        
+        System.out.println("------ RECORRIDO ------");
+        
         for(Libro lb : libros){
             lb.mostrar();
             System.out.println();
@@ -50,21 +36,32 @@ public class Main {
         
         System.out.println("Libros en Total : " + cantidad);
         
+        System.out.println();
+        
         aux = libros.get(0);
         
         aux.mostrar();
         
-        libros.set(0, libro3);
+        libros.set(0, unLibro3);
         
         for(Libro unlibro : libros){
             unlibro.mostrar();
+            System.out.println();
         }
         
         libros.remove(0);
         
         for(Libro unlibro2 : libros){
             unlibro2.mostrar();
-        }
+            System.out.println();
+        }      
         
+        Libro auxiliar2;
+        auxiliar2 = libros.get(0);
+        auxiliar2.asignarAnioDePublicacion(2010);
+        
+        System.out.println("------ DATOS ------");
+        
+        auxiliar2.mostrar();
     }
 }
