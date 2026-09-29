@@ -13,14 +13,14 @@ public class Libro {
     private String autor;
     private int anioDePublicacion;
     private double precio;
-    private boolean disponible;
+    private EstadoLibro estado;
     
     public void mostrar(){
         System.out.println(titulo);
         System.out.println(autor);
         System.out.println(anioDePublicacion);
         System.out.println(precio);
-        System.out.println(disponible);
+        System.out.println(estado);
     }
 
     public String verTitulo() {
@@ -55,20 +55,20 @@ public class Libro {
         this.precio = precio;
     }
 
-    public boolean isDisponible() {
-        return disponible;
+    public EstadoLibro verEstado() {
+        return estado;
     }
 
-    public void asignarDisponible(boolean disponible) {
-        this.disponible = disponible;
+    public void asignarEstado(EstadoLibro es) {
+        this.estado = es;
     }
 
-    public Libro(String titulo, String autor, int anioDePublicacion, double precio, boolean disponible) {
+    public Libro(String titulo, String autor, int anioDePublicacion, double precio) {
         this.titulo = titulo;
         this.autor = autor;
         this.anioDePublicacion = anioDePublicacion;
         this.precio = precio;
-        this.disponible = disponible;
+        this.estado = EstadoLibro.DISPONIBLE;
     }
     
     

@@ -4,6 +4,7 @@
  */
 package biblioteca.controladores;
 
+import biblioteca.modelos.EstadoLibro;
 import biblioteca.modelos.Libro;
 import java.util.ArrayList;
 
@@ -13,9 +14,9 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) {
-        Libro unLibro1 = new Libro("gfdg", "dlbdf", 2000, 56.44f, true);
-        Libro unLibro2 = new Libro("gjbs", "cbxvc", 1999, 87.41f, true);
-        Libro unLibro3 = new Libro("nsdvh", "asdgd", 1988, 96.74f, true);
+        Libro unLibro1 = new Libro("gfdg", "dlbdf", 2000, 56.44f);
+        Libro unLibro2 = new Libro("gjbs", "cbxvc", 1999, 87.41f);
+        Libro unLibro3 = new Libro("nsdvh", "asdgd", 1988, 96.74f);
         Libro aux;
         
         int cantidad;
